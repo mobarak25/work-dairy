@@ -6,6 +6,7 @@ import 'package:slide_digital_clock/slide_digital_clock.dart';
 import 'package:workdiaryapp/app_bar/account_app_bar.dart';
 import 'package:workdiaryapp/bottom_bar/check_in_bottom_bar.dart';
 import 'package:workdiaryapp/constants.dart';
+import 'package:workdiaryapp/screens/check_out/check_out.dart';
 
 class CheckInScreen extends StatelessWidget {
   const CheckInScreen({Key? key}) : super(key: key);
@@ -64,7 +65,11 @@ class CheckInScreen extends StatelessWidget {
                       ),
                     ),
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(
+                          const CheckOutScreen(),
+                        );
+                      },
                       child: Container(
                         margin: const EdgeInsets.all(10),
                         decoration: const BoxDecoration(
@@ -112,7 +117,7 @@ class CheckInScreen extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: const CheckInOutBottomBar(),
+        bottomNavigationBar: const CheckInBottomBar(),
       ),
     );
   }

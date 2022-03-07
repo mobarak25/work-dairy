@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:workdiaryapp/components/circle_btn.dart';
 
-class CheckInOutBottomBar extends StatelessWidget {
-  const CheckInOutBottomBar({
+class CheckInBottomBar extends StatelessWidget {
+  const CheckInBottomBar({
     Key? key,
   }) : super(key: key);
 
