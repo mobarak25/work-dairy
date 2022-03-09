@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CircleBtn extends StatelessWidget {
-  final VoidCallback press;
+  final VoidCallback? press;
   final IconData icon;
   final String title, subTitle;
   final bool isTitle;
 
   const CircleBtn({
     Key? key,
-    required this.press,
+    this.press,
     required this.icon,
     this.title = "-- : --",
     required this.subTitle,
@@ -24,6 +24,7 @@ class CircleBtn extends StatelessWidget {
           Container(
             width: 45, //Get.width * .3,
             height: 45,
+            margin: const EdgeInsets.only(bottom: 5),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(color: Colors.grey),
@@ -34,12 +35,15 @@ class CircleBtn extends StatelessWidget {
             Text(
               title,
               style: const TextStyle(
+                height: 1,
                 fontSize: 14,
+                fontWeight: FontWeight.w600,
               ),
             ),
           Text(
             subTitle,
             style: const TextStyle(
+              height: 1.1,
               fontSize: 14,
             ),
           ),

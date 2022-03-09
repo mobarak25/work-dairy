@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:workdiaryapp/components/circle_btn.dart';
+import 'package:workdiaryapp/screens/check_in/check_in.dart';
 
 class CheckOutBottomBar extends StatelessWidget {
   const CheckOutBottomBar({
@@ -20,12 +21,20 @@ class CheckOutBottomBar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           CircleBtn(
-            press: () {},
+            press: () {
+              Get.to(
+                const CheckInScreen(),
+              );
+            },
+            title: "10:30 AM",
+            isTitle: true,
             subTitle: "Check in",
             icon: Icons.update,
           ),
           CircleBtn(
             press: () {},
+            title: "-- : --",
+            isTitle: true,
             subTitle: "Check Out",
             icon: Icons.schedule,
           ),
