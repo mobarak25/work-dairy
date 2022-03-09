@@ -31,6 +31,8 @@ class CheckOutBottomBar extends StatelessWidget {
           ),
           CircleBtn(
             press: () {},
+            title: "08:25 H",
+            isTitle: true,
             subTitle: "Total Time",
             icon: Icons.update,
           ),
