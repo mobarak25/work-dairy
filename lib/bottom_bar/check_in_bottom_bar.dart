@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:workdiaryapp/components/circle_btn.dart';
+import 'package:workdiaryapp/screens/login/login.dart';
 
 class CheckInBottomBar extends StatelessWidget {
   const CheckInBottomBar({
@@ -19,7 +21,7 @@ class CheckInBottomBar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           CircleBtn(
-            press: () {},
+            press: () => Get.to(const LoginScreen()),
             subTitle: "Log in",
             icon: Icons.near_me,
           ),

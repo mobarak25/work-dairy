@@ -7,7 +7,7 @@ const kPrimaryGradientColor = LinearGradient(
   end: Alignment.bottomRight,
   colors: [Color(0xFFFFA53E), Color(0xFFFF7643)],
 );
-const kSecondaryColor = Color(0xFF979797);
+const kSecondaryColor = Color(0xFF6D7074);
 const kTextColor = Color(0xFF2B2F36);
 
 const kAnimationDuration = Duration(milliseconds: 200);
@@ -38,3 +38,4 @@ const kSubtitleTextSyule = TextStyle(
 
 // Asset Resources
 const String checkInOutSvg = 'assets/icons/checkInOut.svg';
+const String logoPng = 'assets/images/logo.png';

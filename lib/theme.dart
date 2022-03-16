@@ -13,18 +13,14 @@ ThemeData theme() {
 
 InputDecorationTheme inputDecorationTheme() {
   return InputDecorationTheme(
-    floatingLabelBehavior: FloatingLabelBehavior.always,
-    labelStyle: const TextStyle(color: kTextColor),
-    contentPadding: const EdgeInsets.fromLTRB(42, 15, 5, 15),
+    contentPadding: const EdgeInsets.symmetric(horizontal: 13, vertical: 13),
     enabledBorder: OutlineInputBorder(
-      borderSide: const BorderSide(color: kTextColor),
-      borderRadius: BorderRadius.circular(30),
-      gapPadding: 8,
+      borderSide: const BorderSide(color: kSecondaryColor),
+      borderRadius: BorderRadius.circular(0),
     ),
     focusedBorder: OutlineInputBorder(
-      borderSide: const BorderSide(color: kTextColor),
-      borderRadius: BorderRadius.circular(30),
-      gapPadding: 8,
+      borderSide: const BorderSide(color: kSecondaryColor),
+      borderRadius: BorderRadius.circular(0),
     ),
   );
 }
