@@ -13,7 +13,7 @@ ThemeData theme() {
 
 InputDecorationTheme inputDecorationTheme() {
   return InputDecorationTheme(
-    contentPadding: const EdgeInsets.symmetric(horizontal: 13, vertical: 13),
+    contentPadding: const EdgeInsets.symmetric(horizontal: 13, vertical: 5),
     enabledBorder: OutlineInputBorder(
       borderSide: const BorderSide(color: kSecondaryColor),
       borderRadius: BorderRadius.circular(0),

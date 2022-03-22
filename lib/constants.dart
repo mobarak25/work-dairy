@@ -39,3 +39,4 @@ const kSubtitleTextSyule = TextStyle(
 // Asset Resources
 const String checkInOutSvg = 'assets/icons/checkInOut.svg';
 const String logoPng = 'assets/images/logo.png';
+const String profilePng = 'assets/images/profile.png';
