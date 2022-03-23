@@ -40,7 +40,7 @@ class DashboardAppBar extends StatelessWidget implements PreferredSizeWidget {
                         ),
                         image: const DecorationImage(
                           image: ExactAssetImage(profilePng),
-                          fit: BoxFit.contain,
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
