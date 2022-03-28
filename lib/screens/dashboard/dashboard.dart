@@ -47,8 +47,9 @@ class _DashboardScreenState extends State<DashboardScreen> with TickerProviderSt
                 ),
               ),
             ),
+            const SizedBox(height: 10),
             Container(
-              height: 300,
+              height: 355,
               padding: EdgeInsets.symmetric(horizontal: Get.width * 0.03),
               child: TabBarView(
                 controller: tabController,

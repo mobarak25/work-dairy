@@ -1,6 +1,7 @@
 /// Bar chart example
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
+import 'package:workdiaryapp/constants.dart';
 
 class MyBarChart extends StatelessWidget {
   const MyBarChart({Key? key}) : super(key: key);
@@ -25,7 +26,69 @@ class MyBarChart extends StatelessWidget {
         colorFn: (WorldPopulation pops, _) => charts.ColorUtil.fromDartColor(pops.barColor),
       ),
     ];
-    return charts.BarChart(series);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          "Top Ranked",
+          style: TextStyle(fontSize: 12, height: 1.5, fontWeight: FontWeight.w600),
+        ),
+        const Text(
+          "83% occupied by DBL ",
+          style: TextStyle(height: 1.2, fontSize: 18, fontWeight: FontWeight.w600),
+        ),
+        Row(
+          children: [
+            Container(
+              width: 15,
+              height: 15,
+              decoration: const BoxDecoration(color: kSecondaryColor, shape: BoxShape.circle),
+            ),
+            const SizedBox(width: 7),
+            const Text(
+              "23% Opportunity to grow XCG",
+              style: TextStyle(fontSize: 12, height: 1.2, fontWeight: FontWeight.w600),
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+        SizedBox(
+          height: 240,
+          child: charts.BarChart(series),
+        ),
+        const SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            buldSummery("First Rank", "DBL- 83%"),
+            buldSummery("Second Rank", "Rosha: 76%"),
+            buldSummery("Third Rank", "XCG: 69%"),
+            buldSummery("Fourth Rank", "Khadim: 55%"),
+          ],
+        )
+      ],
+    );
+  }
+
+  Text buldSummery(String? title, String? subtitle) {
+    return Text.rich(
+      TextSpan(
+        text: "$title\n",
+        style: const TextStyle(
+          height: 1.1,
+          fontSize: 11,
+        ),
+        children: [
+          TextSpan(
+            text: subtitle,
+            style: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 
